@@ -1,64 +1,69 @@
-// let a = 24;
-// let b = "1";
-// console.log(a % 3);
-// console.log(typeof (a / b));
+// let name = `"Генератор защитного поля"`;
+// let price = 1000;
+// console.log(`Выбран ${name},цена за штуку ${price} кредитов`);
+// price = 2000;
+// console.log(`Выбран ${name},цена за штуку ${price} кредитов`);
 
-// let a = 12;
-// let b = 3;
-// let result = a + b;
-// console.log(result);
-
-// let p = 3.14;
-// let r = 10;
-// let S = Math.pow(r, 2) * p;
-// console.log(S);
-
-// let b = `А`;
-// let c = `Б`;
-// let d = `Ц`;
-// console.log(
-//   `здраствуйте меня зовут ${b},мне ${c}, лет и мне нравиться ${d}, где ${b}, ${c}, ${d} - переменные вставленные в строку `
-// );
-// let a = !1;
-// let b = 0;
-// console.log(a === b);
-
-// let a;
-// let b = true;
-// let c = a || b;
-// console.log(c);
-
-// let a;
-// let b = true;
-// let c = a && b;
-// console.log(c);
-
-// let cost = 0;
-// const subscription = "pro";
-// if (subscription === "pro") {
-//   cost = 100;
-// }
-// console.log(cost);
-
-// let cost = 0;
-// const number = 5;
-// number > 10 ? (cost = 100) : console.log("false");
-// console.log(cost);
-
-// let a = 1;
-
-// if (true) {
-//   a = 2;
-// }
-// console.log(a);
-
-// let x = 10;
-// while (x != 0) {
-//   x--;
-//   console.log(x);
+// const total = 100;
+// const ordered = 50;
+// if (total >= ordered) {
+//   console.log("Заказ оформлен, с вами свяжется менеджер");
+// } else {
+//   console.log("На складе недостаточно товаров!");
 // }
 
-// const max = 10;
-// for (let i = 0; i < 5; ++i) {
-//   console.log(i);
+// const ADMIN_PASSWORD = "jqueryismyjam";
+// let message;
+// let password = prompt("Введите пароль");
+// if (password === "") {
+//   message = "отменено пользователем";
 // }
+// console.log(message);
+
+// if (password === ADMIN_PASSWORD) {
+//   message = "Добро пожаловать!";
+//   console.log(message);
+// } else {
+//   message = "Доступ запрещен, неверный пароль!";
+//   console.log(message);
+// }
+
+// let credits = 23580;
+// let pricePerDroid = 3000;
+// let totalPrice;
+
+// let sity1 = "Китай";
+// let sity2 = "Чили";
+// let sity3 = "Австралия";
+// let sity4 = "Индия";
+// let sity5 = "Ямайка";
+// let cost;
+// switch ((sity1, sity2, sity3, sity4, sity5)) {
+//   case "Китай":
+//     cost = 100;
+//     break;
+
+//   case "Чили":
+//     cost = 250;
+//     break;
+
+//   case "Австралия":
+//     cost = 170;
+//     break;
+
+//   case "Индия":
+//     cost = 80;
+//     break;
+
+//   case "Ямайка":
+//     cost = 120;
+//     break;
+
+//   default:
+//     console.log("В вашей стране доставка не доступна");
+// }
+// console.log("Доставка в $ {sity} будет стоить $ {cost} кредитов");
+// let input;
+// do {
+//   input = prompt("введи число");
+// } while (input !== null);
