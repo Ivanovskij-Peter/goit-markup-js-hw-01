@@ -236,3 +236,43 @@
 //   console.log(str.repeat(n));
 // };
 // repeat("");
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// const keys = Object.keys(hotel); // ["name", "stars", "capacity"]
+// const values = Object.values(hotel); // ["Resort Hotel", 5, 100]
+// const entries = Object.entries(hotel); // [Array(2), Array(2), Array(2)]
+// console.log(entries);
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// const keys = Object.keys(hotel); // ["name", "stars", "capacity"]
+// console.log(keys);
+// for (const key of keys) {
+//   console.log("Value: ", hotel[key]);
+// }
+/*
+ * Value: Resort Hotel
+ * Value: 5
+ * Value: 100
+ */
+
+// const add = function (...args) {
+//   console.log(args); // массив всех аргументов
+// };
+
+// add(1, 2, 3);
+// add(1, 2, 3, 4, 5);
+// const add = function (value, ...args) {
+//   console.log(value); // первый аргумент
+//   console.log(args); // массив всех остальных аргументов
+// };
+
+// add(10, 1, 2, 3);
+// add(15, 1, 2, 3, 4, 5);
