@@ -115,3 +115,124 @@
 // };
 
 // max(1, 2, 3, 4, 5, 6, 7, 8);
+
+// 21.07
+// const fn2 = (...rest) => {
+//   let total = 0;
+//   for (let elem of rest) {
+//     console.log(elem, "check num:", Number.isNaN(elem));
+//     if (!isNaN(elem)) {
+//       total += Number(elem);
+//     }
+//   }
+//   return total;
+// };
+// const res = fn2(2, 3, 4, "4", 6, 6);
+// console.log("result:", res);
+
+// const sum = (a, b) => {
+//   return a + b;
+// };
+// console.log(sum(4, 5));
+
+// const sum = (flag, a, b) => {
+//   if (flag === "increment") {
+//     return a + b;
+//   } else {
+//     return a - b;
+//   }
+// };
+// console.log(sum("increment", 10, 5));
+// console.log(sum("decrement", 10, 5));
+
+// const sum = (flag, a, b) => (flag === "increment" ? a + b : a - b);
+// console.log(sum("increment", 10, 5));
+
+// const sum = (flag, a, b) => {
+//   return flag === "increment" ? a + b : a - b;
+// };
+// console.log(sum("decrement", 10, 5));
+
+// const arr = [
+//   [3, 4, 5, 6],
+//   [75, 7, 85, 33],
+// ];
+// console.log(arr);
+// const sum = (param) => {
+//   let total = 0;
+//   for (let i = 0; i < param.length; i++) {
+//     console.log(param[i]);
+//     for (let j = 0; j < param[i].length; j++) {
+//       const element = param[i][j];
+//       console.log(element);
+//       total += element;
+//     }
+//   }
+//   return total;
+// };
+// const summ = sum(arr);
+// console.log(summ);
+
+// const a = [3, 4, 5, 6];
+// const b = [75, 7, 85, 33];
+// const c = [75, 4, 5, 3, 6];
+// const d = [34, 56, 7, 8, 9];
+
+// const tranformArr = (...rest) => {
+//   const uniqueArr = [];
+//   for (let elem of rest) {
+//     uniqueArr.push(...elem);
+//   }
+//   return uniqueArr;
+// };
+// const uniqueArr = tranformArr(a, b, c, d);
+// const sum = () => {};
+// const total = sum(uniqueArr);
+
+// const findUniqueNumber = (arr, ...rest) => {
+//   const unique = [];
+//   console.log(arr);
+//   console.log(rest);
+//   console.log(tranformArr(arr, rest));
+//   for (let elem of tranformArr(arr, rest)) {
+//     if (!unique.includes(elem)) {
+//       unique.push(elem);
+//     }
+//   }
+//   return unique;
+// };
+
+// const uniqueNumbers = findUniqueNumber(
+//   [1, 2, 3, 4, 0, 6, 9, 8],
+//   9,
+//   0,
+//   34,
+//   56,
+//   78
+// );
+// console.log(uniqueNumbers);
+
+// const ask = function (question, yes, no) {
+//   confirm(question) ? yes() : no();
+// };
+
+// ask(
+//   "Вы согласны ?",
+//   () => alert("Вы согласились."),
+//   () => alert("Вы отменили выполнение.")
+// );
+
+// Напишите функцию hello(), которая при вызове будет принимать переменную name(например, «Василий») и
+// выводить строку(в нашем случае «Привет, Василий»).В случае отсутствующего аргумента выводить «Привет, гость»
+// const hello = function (ask = "Василий") {
+//   console.log("Привет", ask);
+// };
+// hello("гость");
+
+// #3
+// Создайте функцию repeat(str, n), которая возвращает строку, состоящую из
+//  n повторений строки str. n — по умолчанию 2, str — пустая строка
+// const repeat = function (str = "", n = 2) {
+//   console.log(str.repeat(n));
+// };
+// repeat("");
