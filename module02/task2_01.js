@@ -59,7 +59,7 @@
 // #4
 // const formatString = function (string) {
 //   let mystring = string.length;
-//   if (mystring <= 40) {
+//   if (mystring < 40) {
 //     return string;
 //   } else {
 //     return string.slice(0, 40) + "...";
