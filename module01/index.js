@@ -276,3 +276,78 @@
 
 // add(10, 1, 2, 3);
 // add(15, 1, 2, 3, 4, 5);
+
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+// };
+
+// const obg2 = {
+//   d: 4,
+//   e: 5,
+// };
+// const obg3 = { ...obj, ...obg2 };
+// console.log(obg3);
+
+// / Напишите функцию isEmpty(obj), которая возвращает true,
+// если у объекта нет свойств, иначе false.
+
+// let schedule = {
+
+// };
+// const isEmpty = function (obj) {
+// //   //   //   //   for (let key in obj) {
+// //   //   //   //     return false;
+// //   //   //   //   }
+// //   //   //   //   return true;
+// //   //   //   return Object.keys(obj).length === 0 ? true : false;
+//   if (Object.keys(obj).length) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// alert(isEmpty(schedule)); // true
+
+// schedule[“8: 30”] = “get up”;
+
+// alert(isEmpty(schedule)); // false
+
+// У нас есть объект, в котором хранятся зарплаты нашей команды:
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+// // // Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+
+// // // Если объект salaries пуст, то результат должен быть 0.
+// let keys = Object.values(salaries);
+// let sum = 0;
+// for (let key of keys) {
+//   sum += key;
+// }
+// console.log(sum);
+
+// #4
+// Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu",
+// };
+
+// const multiplyNumeric = function (obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "number") {
+//       obj[key] *= 2;
+//     }
+//   }
+// };
+
+// multiplyNumeric(menu);
+// console.log(menu);
