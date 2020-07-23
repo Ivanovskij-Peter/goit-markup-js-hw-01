@@ -35,11 +35,17 @@
 // console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 })); // 3
 
 // #3
-// Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя самого продуктивного(который выполнил больше всех задач).Сотрудники и кол - во выполненых задач содержатся как свойства объекта в формате "имя": "кол-во задач".
+//   и возвращает имя самого продуктивного(который выполнил больше всех задач).Сотрудники и кол - во выполненых задач содержатся как свойства объекта в формате "имя": "кол-во задач".
 
 // const findBestEmployee = function (employees) {
-//   for (let elem in employees);
-//   console.log(elem);
+//   let max = 0;
+//   for (let [name, task] of Object.entries(employees)) {
+//     if (max < task) {
+//       max = task;
+//       employ = name;
+//     }
+//   }
+//   return employ;
 // };
 
 // console.log(
@@ -82,6 +88,7 @@
 // };
 
 // console.log(countTotalSalary({})); // 0
+
 // console.log(
 //   countTotalSalary({
 //     mango: 100,
@@ -100,6 +107,7 @@
 
 // #5
 // Напиши функцию getAllPropValues(arr, prop), которая получает массив объектов и имя свойства.Возвращает массив значений определенного свойства prop из каждого объекта в массиве.
+// 1.создать новый масив. 2. перебираем обьект.3.пуш в масив значения.
 
 // const products = [
 //   { name: "Радар", price: 1300, quantity: 4 },
@@ -108,7 +116,17 @@
 //   { name: "Захват", price: 1200, quantity: 2 },
 // ];
 
-// const getAllPropValues = function (arr, prop) {};
+// function getAllPropValues(arr, prop) {
+//   let newProduct = [];
+
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index][prop] !== undefined) {
+//       const element = arr[index][prop];
+//       newProduct.push(element);
+//     }
+//   }
+//   return newProduct;
+// }
 
 // console.log(getAllPropValues(products, "name")); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
@@ -130,15 +148,23 @@
 // ];
 
 // const calculateTotalPrice = function (allProdcuts, productName) {
-//   let keys = Object.keys(products);
-//   for (let key of keys) {
-//     console.log("value:", products[key]);
+//   let summ;
+
+//   for (let i = 0; i < allProdcuts.length; i++) {
+//     let iterable = allProdcuts[i].name;
+//     if (iterable === productName) {
+//       let totalPrice = allProdcuts[i].price;
+//       let totalquantity = allProdcuts[i].quantity;
+//       summ = totalPrice * totalquantity;
+//     }
 //   }
+
+//   return summ;
 // };
 
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
+// // /*
+// //  * Вызовы функции для проверки работоспособности твоей реализации.
+// //  */
 // console.log(calculateTotalPrice(products, "Радар")); // 5200
 
-// console.log(calculateTotalPrice(products, "Дроид")); // 2800
+// console.log(calculateTotalPrice(products, "Дроид")); //2800

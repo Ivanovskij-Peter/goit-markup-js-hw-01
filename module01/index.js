@@ -351,3 +351,63 @@
 
 // multiplyNumeric(menu);
 // console.log(menu);
+
+// Дан объект {name: ‘Петр’, ‘surname’: ‘Петров’, ‘age’: ’20 лет‘, }.
+// Запишите соответствующие значения в переменные name, surname и age.
+// Сделайте так, чтобы, если какое-то значение не задано - оно принимало
+//  следующее значение по умолчанию: {name: ‘Аноном’, ‘surname’: ‘Анонимович’, ‘age’: ‘? лет’}.
+
+// let obj = {
+//   name: "Петр",
+//   surname: "Иванов",
+//   age: "20 лет",
+// };
+// const { name = "Петр", surname = "Иванов", age = "20 лет" } = obj;
+// console.log(age);
+
+// const fizzBuzz = function (n) {
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("fizzBuzz");
+//     }
+//     if (i % 3 === 0) {
+//       console.log("fizz");
+//     } else if (i % 5 === 0) {
+//       console.log("Buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// };
+// fizzBuzz(15);
+
+// let calculator = {
+//   read: function (a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   sum: function () {
+//     let arr = Object.values(calculator);
+//     let sum = 0;
+//     for (let el of arr) {
+//       if (typeof el === "number") {
+//         sum += el;
+//       }
+//     }
+//     return sum;
+//   },
+//   mul: function () {
+//     let arr = Object.values(calculator);
+//     let mul = 1;
+//     for (let el of arr) {
+//       if (typeof el === "number") {
+//         mul += el;
+//       }
+//     }
+//     return mul;
+//   },
+// };
+// calculator.read(4, 2);
+// alert(calculator.sum());
+// alert(calculator.mul());
+// console.log(calculator);

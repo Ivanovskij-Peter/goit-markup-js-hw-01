@@ -1,7 +1,8 @@
 // #1
 
 // const logItems = function (array) {
-//   for (let i = 0; i < array.length; i += 1) {
+//   let arraylenght = array.length;
+//   for (let i = 0; i < arraylenght; i += 1) {
 //     console.log(i + 1, "_", array[i]);
 //   }
 // };
@@ -9,8 +10,8 @@
 // logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 
 // #2
-// const calculateEngravingPrice = function (a, b) {
-//   return a.split(" ").length * b;
+// const calculateEngravingPrice = function (text, price) {
+//   return text.split(" ").length * price;
 // };
 
 // console.log(
@@ -38,14 +39,11 @@
 
 // #3
 // const findLongestWord = function (string) {
-//   let text = string.split(" ");
-//   let firstword = text[0];
-//   for (let i = 0; i < text.length; i++) {
-//     if (text[i].length > firstword.length) {
-//       firstword = text[i];
-//     }
+//   let words = string.split(" ");
+//   let firstword = words[0];
+//   for (let word of words) {
+//     if (word.length > firstword.length) firstword = word;
 //   }
-
 //   return firstword;
 // };
 
@@ -57,12 +55,14 @@
 // console.log(findLongestWord("May the force be with you")); // 'force'
 
 // #4
+// const size = 40;
+// const startPosition = 0;
 // const formatString = function (string) {
 //   let mystring = string.length;
-//   if (mystring < 40) {
+//   if (mystring < size) {
 //     return string;
 //   } else {
-//     return string.slice(0, 40) + "...";
+//     return string.slice(startPosition, size) + "...";
 //   }
 // };
 
