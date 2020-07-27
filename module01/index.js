@@ -424,3 +424,52 @@
 // Напишите ф-цию, которая примает аргументами 2 числа,  задающих диапазон который нужно вывести в консоль
 // если в числе есть 3 - в консоль вместо него выводиться “three”
 // (то есть вместо 3, 13, 23 и т.д. должно быть “three”)
+
+// let myGlobalStatistic = {
+//     lightArmor: 0,
+//     chainMail: 0,
+//     scaleArmor: 0,
+// };
+
+// let myDayStatistic = {
+//     lightArmor: 0,
+//     chainMail: 0,
+//     scaleArmor: 0,
+// };
+
+// const SellSomething = function (color, size, type) {
+//     this.color = color;
+//     this.size = size;
+//     this.type = type;
+
+//     this.buyNow = function (num) {
+//         for (let el in myDayStatistic) {
+//             if (el === type) {
+//                 myDayStatistic[el] = myDayStatistic[el] + num;
+//                 console.log(
+//                     `Your order are ${myDayStatistic[el]} ${this.color} ${this.type} with size: ${this.size}`
+//                 );
+//                 console.log(`My day stat for ${el}: ${myDayStatistic[el]}`);
+//             }
+//         }
+//     };
+//     this.boughtStatistic = function (num) {
+//         for (let el in myGlobalStatistic) {
+//             if (el === type) {
+//                 myGlobalStatistic[el] = myGlobalStatistic[el] + num;
+//                 console.log(`My global stat for ${el}: ${myGlobalStatistic[el]}`);
+//             }
+//         }
+//     };
+// };
+
+// const leatherJackets = new SellSomething("brown", "medium", "lightArmor");
+// leatherJackets.buyNow(50);
+// leatherJackets.buyNow(300);
+// leatherJackets.boughtStatistic(500);
+
+// const Hauberk = new SellSomething("steel", "medium", "chainMail");
+// Hauberk.buyNow(200);
+// Hauberk.buyNow(10);
+// Hauberk.buyNow(20);
+// Hauberk.boughtStatistic(300);
