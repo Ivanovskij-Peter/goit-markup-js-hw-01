@@ -473,3 +473,23 @@
 // Hauberk.buyNow(10);
 // Hauberk.buyNow(20);
 // Hauberk.boughtStatistic(300);
+
+// const hotel = {
+//   name: "Resort hotel",
+//   showThis() {
+//     const fn = () => {
+//       /*
+//        * Стрелки запоминают контекст во время объявления,
+//        * из родительской области видимости
+//        */
+//       console.log("this in fn: ", this);
+//     };
+
+//     fn();
+//     console.log("this in showThis: ", this);
+//   },
+// };
+
+// hotel.showThis();
+// // this in fn: {name: 'Resort hotel', showThis: ƒ}
+// // this in showThis: {name: 'Resort hotel',showThis: ƒ}
