@@ -493,3 +493,47 @@
 // hotel.showThis();
 // // this in fn: {name: 'Resort hotel', showThis: ƒ}
 // // this in showThis: {name: 'Resort hotel',showThis: ƒ}
+
+// 1) Даны два массива: [‘a’, ‘b’, ‘c’] и [1, 2, 3]. Объедините их вместе.
+// 2) Дан массив [‘a’, ‘b’, ‘c’]. Добавьте ему в конец элементы 1, 2, 3.
+// 3) Дан массив[1, 2, 3].Сделайте из него массив[3, 2, 1].
+
+// let a = ["a", "b", "c"];
+// let b = [1, 2, 3];
+// const c = a.concat(b);
+// console.log(c);
+
+// let str = ["a", "b", "c"];
+// str.push(1, 2, 3);
+// console.log(str);
+
+// let a = [1, 2, 3, 4, 5];
+// let b = a.slice(0, 3);
+// console.log(b);
+
+// let b = [1, 2, 3];
+// let a = b.reverse();
+// console.log(a);
+
+// let a = [1, 2, 3, 4, 5];
+// a.splice(1, 2);
+// console.log(a);
+
+// // 1) Вибираємо випадкове число (від 0 до довжини масива);
+// const a = [1, 2, 3, 4, 5];
+// 2)// -) Записуємо в змінну строку з промта
+// -) Зробити строку масивом
+// -) Скопіювати масив в нову змінну
+// -) Реверсимо масив
+// -) З масивів робимо строки
+// const a = [1, 2, 3, 4, 5];
+// let b = Math.floor(Math.random() * a.length);
+// console.log(a[b]);
+
+// let ask = prompt("add text");
+// let newAsk = ask.split(" ");
+// console.log(newAsk);
+// newAsk.reverse();
+// console.log(newAsk);
+// let str = newAsk.join(" ");
+// console.log(str);
