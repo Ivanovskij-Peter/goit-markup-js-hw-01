@@ -537,3 +537,124 @@
 // console.log(newAsk);
 // let str = newAsk.join(" ");
 // console.log(str);
+
+// let creaturesArr = [];
+// class Creature {
+//   constructor(type, planet, status, sex) {
+//     this.type = type;
+//     this.planet = planet;
+//     this.status = status;
+//     this.sex = sex;
+//   }
+//   get show() {
+//     return `This ${this.type} is from ${this.planet} and has ${this.status} status`;
+//   }
+//   set changePlanet(str) {
+//     this.planet = str;
+//     return this.planet;
+//   }
+//   static intro() {
+//     console.log("There is a billions types of creatures all around the world!");
+//   }
+//   static checkCreatures() {
+//     console.log(creaturesArr);
+//   }
+// }
+
+// class Human extends Creature {
+//   constructor(name, type, planet, status, sex, nationality) {
+//     super(type, planet, status, sex);
+//     this.name = name;
+//     this.nationality = nationality;
+//   }
+//   addToCreaturesList() {
+//     creaturesArr.push({
+//       name: this.name,
+//       planet: this.planet,
+//       nationlity: this.nationality,
+//     });
+//   }
+// }
+// let Adam = new Human(
+//   "Adam",
+//   "human",
+//   "Mars",
+//   "three-dimensional",
+//   "male",
+//   "Ukrainian"
+// );
+// Adam.addToCreaturesList();
+// let Eva = new Human(
+//   "Eva",
+//   "human",
+//   "Venus",
+//   "three-dimensional",
+//   "female",
+//   "Ukrainian"
+// );
+// Eva.addToCreaturesList();
+// Creature.checkCreatures();
+// class Alien extends Creature {
+//   constructor(name, type, planet, status, sex, nationality, xp) {
+//     super(type, planet, status, sex);
+//     this.name = name;
+//     this.nationality = nationality;
+//     this.xp = xp;
+//   }
+//   addToCreaturesList() {
+//     creaturesArr.push({
+//       name: this.name,
+//       planet: this.planet,
+//       nationality: this.nationality,
+//       xp: this.xp,
+//     });
+//   }
+// }
+// let Rico = new Alien(
+//   "Rico",
+//   "incomer",
+//   "Upiter",
+//   "three-dimensional",
+//   "male",
+//   "europian",
+//   "100"
+// );
+// Rico.addToCreaturesList();
+// Creature.checkCreatures();
+
+// ________________________TASK#1
+// Реализуйте класс Student (Студент), который будет наследовать от класса User.
+// Этот класс должен иметь следующие свойства:
+//  name (имя, наследуется от User), surname (фамилия, наследуется от User),
+//  year (год поступления в вуз).
+//  Класс должен иметь метод getFullName() (наследуется от User),
+// с помощью которого можно вывести одновременно имя и фамилию студента.
+// Также класс должен иметь метод getCourse(), который будет выводить текущий курс студента (от 1 до 5).
+// Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. Текущий год получите самостоятельно.
+// Вот так должен выглядеть класс User, от которого наследуется наш Student:
+// const yearNow = new Date().getFullYear();
+// class User {
+//   constructor(name, surname) {
+//     (this.name = name), (this.surname = surname);
+//   }
+//   getFullName() {
+//     return `${this.name} ${this.surname}`;
+//   }
+// }
+// class Student extends User {
+//   constructor(name, surname, year) {
+//     super(name, surname);
+//     this.year = year;
+//   }
+//   getCourse() {
+//     return yearNow - this.year;
+//   }
+// }
+// let student = new Student("Иван", "Иванов", 2017);
+
+// console.log(student.name); //выведет 'Иван'
+// console.log(student.surname); //выведет 'Иванов'
+// console.log(student.getFullName()); //выведет 'Иван Иванов'
+// console.log(student.year); //выведет 2017console.log(worker.getCourse()); //выведет 3 - третий курс, так как текущий год 2020
+// console.log(student.getCourse());
+// console.log(student);
