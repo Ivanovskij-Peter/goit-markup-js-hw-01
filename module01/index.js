@@ -658,3 +658,108 @@
 // console.log(student.year); //выведет 2017console.log(worker.getCourse()); //выведет 3 - третий курс, так как текущий год 2020
 // console.log(student.getCourse());
 // console.log(student);
+
+// 1) Создать масив в котором запишется каждый элемент исходного масива * 2;
+//
+// 2) Создать масив в котором поочерёдно перечисляется длина элементов исходного масиваж
+// var arr = [“Есть“, “жизнь“, “на“, “Марсе“];
+// 3) Посчитайте все лайки пользователей
+// 4) Найдите все обьекты у которых есть тег ‘js’(массив tweets);
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+// const numbers = [1, 2, 3, 4, 5];
+// const doubleNumbers = numbers.map((num) => num * 2);
+// console.log(doubleNumbers);
+
+// const arr = ["Есть", "жизнь", "на", "Марсе"];
+// const result = arr.map((elem) => elem.length);
+// console.log(result);
+
+// const summ = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(summ);
+// let elem = "js";
+// const tweet = tweets.filter((elem) => elem.tags.includes("js"));
+// console.log(tweet);
+
+// let newArr = tweets.filter((el) => (el.tags.includes("js") ? el : ""));
+// console.log(newArr);
+
+// 5) Создайте функцию которая будет подсчитывать сумму всех переданных ей нечётных(!) аргументов;
+// 6) Отсортируйте масив по возрасту юзеров;
+
+// let items = [
+//   { name: "Миша", age: 23 },
+//   { name: "Вася", age: 44 },
+//   { name: "Саша", age: 2 },
+//   { name: "Рома", age: 99 },
+//   { name: "Ашот", age: 19 },
+// ];
+// let biggestAge = (a, b) => a.age - b.age;
+// console.log(items.sort(biggestAge));
+
+//  7) Замените каждый ел емент массива на 0; (Метод fill)
+//  8) Проверьте есть ли  хотя бы один элемент больше 30 ? Верните true / false
+//  const arr = [10, 20,  30, 40];
+//  9) Найдите короля района
+
+// let x = [1, 2, 3, "a", "b", "c"];
+// console.log(x.fill(0));
+
+// const arr = [10, 20, 30, 40];
+// const isBigger = (val) => val >= 30;
+// console.log([10, 20, 30, 40].some(isBigger));
+// let items = [
+//   { name: "Миша", age: 23, isTheKingOfNeighbourhood: false },
+//   { name: "Вася", age: 44, isTheKingOfNeighbourhood: false },
+//   { name: "Саша", age: 2, isTheKingOfNeighbourhood: false },
+//   { name: "Рома", age: 99, isTheKingOfNeighbourhood: false },
+//   { name: "Ашот", age: 19, isTheKingOfNeighbourhood: true },
+// ];
+// const king = items.filter((item) => item.isTheKingOfNeighbourhood);
+// console.log(king);
+
+// const fn = function (...arr) {
+//   console.log(arr);
+//   let sum = arr.reduce((acc, el) => {
+//     if (el % 2 !== 0) {
+//       acc += el;
+//     }
+//     return acc;
+//   }, 0);
+//   return sum;
+// };
+// console.log(fn(1, 2, 3, 4, 5));
+
+// 10) Поменяйте статус юзера на “неактивен“, если daysInactive больше 10;
+// const users = [
+//   { name: "Mango", daysInactive: 10, isActive: true },
+//   { name: "Poly", daysInactive: 5, isActive: true },
+//   { name: "Ajax", daysInactive: 12, isActive: true },
+// ];
+// users.forEach((user) =>
+//   user.daysInactive > 10 ? (user.isActive = false) : " "
+// );
+// console.log(users);
+
+// 11) Создайте ф - цию которая принимает строку и возвращает её записанную “Заборчиком” (ПрИвЕт)
+
+// const camelC = (word) => {
+//   const newAr = [...word];
+//   const resultC = newAr.reduce((acc, char, index) => {
+//     if (index % 2 != 0) {
+//       acc += char.toLowerCase();
+//     } else {
+//       acc += char.toUpperCase();
+//     }
+//     return acc;
+//   }, "");
+//   return resultC;
+// };
+// console.log(camelC("Привет"));
