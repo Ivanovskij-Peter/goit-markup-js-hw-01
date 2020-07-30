@@ -91,14 +91,14 @@ import user from "./user.js";
 
 // Получить массив всех умений всех пользователей(поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
-const getSortedUniqueSkills = (users) => {
-  return users
-    .reduce((allSkills, user) => {
-      allSkills.push(...user.skills);
-      return allSkills;
-    }, [])
-    .filter((user, index, arr) => arr.indexOf(user) === index)
-    .sort();
-};
+// const getSortedUniqueSkills = (users) => {
+//   return users
+//     .reduce((allSkills, user) => {
+//       allSkills.push(...user.skills);
+//       return allSkills;
+//     }, [])
+//     .filter((user, index, arr) => arr.indexOf(user) === index)
+//     .sort();
+// };
 
-console.log(getSortedUniqueSkills(users));
+// console.log(getSortedUniqueSkills(users));
