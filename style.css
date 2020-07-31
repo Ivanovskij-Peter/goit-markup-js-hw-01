@@ -1,0 +1,12 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+}
+.smallBox {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  display: inline-block;
+  border-radius: 50%;
+}

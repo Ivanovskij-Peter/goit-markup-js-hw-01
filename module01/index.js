@@ -1,3 +1,4 @@
+"use strict";
 // const ask = prompt("Какое официальное значение Javascript?");
 // let name = ECMAscript;
 // if (ask === ECMAscript) {
@@ -763,3 +764,27 @@
 //   return resultC;
 // };
 // console.log(camelC("Привет"));
+
+// let body = document.querySelector("body");
+
+// let box = document.createElement("div");
+// body.append(box);
+// console.log(box);
+
+// box.style.width = "100px";
+// box.style.height = "100px";
+// box.style.backgroundColor = "red";
+// box.style.margin = "0 auto";
+// box.style.borderRadius = "50%";
+
+// for (let i = 0; i < 20; i++) {
+//   let box = document.createElement("div");
+//   body.append(box);
+
+//   box.classList.add("smallBox");
+//   setInterval(() => {
+//     box.style.backgroundColor = `rgb(${Math.round(
+//       Math.random() * 255
+//     )},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`;
+//   }, 500);
+// }
