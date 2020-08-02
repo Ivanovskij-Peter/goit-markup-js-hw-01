@@ -21,7 +21,9 @@ import user from "./user.js";
 // Получить массив имен пользователей по полу(поле gender).
 
 // const getUsersWithGender = (users, gender) => {
-//   let newArr = users.filter((user) => user.gender === gender);
+//   let newArr = users
+//     .filter((user) => user.gender === gender)
+//     .map((user) => user.name);
 //   return newArr;
 // };
 
@@ -74,7 +76,9 @@ import user from "./user.js";
 // ассив имен всех пользователей у которых есть друг с указанным именем.
 
 // const getUsersWithFriend = (users, friendName) => {
-//   return users.filter((user) => user.friends.indexOf(friendName) !== -1);
+//   return users
+//     .filter((user) => user.friends.indexOf(friendName) !== -1)
+//     .map((user) => user.name);
 // };
 
 // console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
@@ -83,7 +87,9 @@ import user from "./user.js";
 // Массив имен(поле name) людей, отсортированных в зависимости от количества их друзей(поле friends)
 
 // const getNamesSortedByFriendsCount = (users) => {
-//   return users.sort((a, b) => a.friends.length - b.friends.length);
+//   return users
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map((user) => user.name);
 // };
 
 // console.log(getNamesSortedByFriendsCount(users));
