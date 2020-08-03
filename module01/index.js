@@ -788,3 +788,55 @@
 //     )},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`;
 //   }, 250);
 // }
+// const body = document.querySelector("body");
+// const htmlBox = document.createElement("p");
+// body.append(htmlBox);
+// htmlBox.textContent = "1";
+// console.log(htmlBox);
+// const pEl = document.createElement("p");
+// body.append(pEl);
+// pEl.textContent = "2";
+// htmlBox.classList.add("first-item");
+// pEl.classList.add("second-item");
+
+// htmlBox.addEventListener("click", () => {
+//   if (htmlBox.textContent === "1") {
+//     htmlBox.textContent = "2";
+//     pEl.textContent = "1";
+//   } else {
+//     htmlBox.textContent = "1";
+//     pEl.textContent = "2";
+//   }
+// });
+
+// pEl.addEventListener("click", () => {
+//   if (htmlBox.textContent === "1") {
+//     htmlBox.textContent = "2";
+//     pEl.textContent = "1";
+//   } else {
+//     htmlBox.textContent = "1";
+//     pEl.textContent = "2";
+//   }
+// });
+
+// Сделайте текстовый инпут который принимает значение цвета и меняет цвет бекграунда для body
+// const body = document.querySelector("body");
+// const inputEl = document.createElement("input");
+// body.append(inputEl);
+// inputEl.addEventListener("click", (e) => {
+//   body.style.background = inputEl.value;
+// });
+
+// При нажатии на кнопку создаётся квадрат, при изменение инпута(range) - меняется его размер(размер грани должен быть больше 100 пикселей) При нажатии на вторую кнопку - квадрат удаляется
+// const btn = document.createElement("button");
+// body.append(btn);
+// btn.textContent = "click me";
+// let box = document.createElement("p");
+// body.append(box);
+// let input = document.createElement("input");
+// body.append(input);
+// btn.addEventListener("click", () => {
+//   let box = document.createElement("p");
+//   body.append(box);
+//   box.classList.add("item");
+// });

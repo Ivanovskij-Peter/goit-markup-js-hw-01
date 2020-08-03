@@ -1,12 +1,35 @@
-.body {
+/* .body {
   display: flex;
-  justify-content: space-between;
-}
-.smallBox {
+  justify-content: center;
+} */
+/* .smallBox {
   margin-right: 10px;
   width: 30px;
   height: 30px;
   background-color: red;
   display: inline-block;
   border-radius: 50%;
+} */
+/* .first-item {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
+.second-item {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-color: green;
+  justify-content: center;
+  margin: 0 auto;
+}
+.item {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-color: blue;
+} */
