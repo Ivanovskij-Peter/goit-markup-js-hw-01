@@ -2,3 +2,13 @@
 // Сколько символов должно быть в инпуте, указывается в его атрибуте data - length.
 // Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
 // Для добавления стилей, используй CSS - классы valid и invalid.
+
+// document.querySelector("#validation-input").onblur = function () {
+//   if (this.getAttribute("data-length") > this.value.length) {
+//     this.classList.remove("valid");
+//     this.classList.add("invalid");
+//   } else {
+//     this.classList.remove("invalid");
+//     this.classList.add("valid");
+//   }
+// };

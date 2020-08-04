@@ -840,3 +840,26 @@
 //   body.append(box);
 //   box.classList.add("item");
 // });
+
+/*  Напишите скрипт который реализует следующий функционал.  Есть кнопка с классом button, текст которой отображает   кол-во раз которое по ней кликнули, обновляется при каждом клике.*/
+
+// console.log(btn);
+// let counter = 0;
+// btn.addEventListener("click", () => {
+//   counter += 1;
+//   btn.textContent = counter;
+// });
+
+// Даны 2 инпута, абзац и кнопка.По нажатию на кнопку  получите числа которые бьудут введены в инпуты и запишите их сумму в span.result.
+// const refs = {
+//     item: document.querySelector(".first");
+//     el: document.querySelector(".second");
+//     btn: document.querySelector(".button");
+//     p : document.querySelector("p");
+
+// }
+
+// const getResult = () =>
+//     (refs.result.textContent = Number(refs.firstInput.value) + Number(refs.firstInput.value));
+
+// refs.btn.addEventListener("click".getResult);
