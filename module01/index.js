@@ -852,14 +852,8 @@
 
 // Даны 2 инпута, абзац и кнопка.По нажатию на кнопку  получите числа которые бьудут введены в инпуты и запишите их сумму в span.result.
 // const refs = {
-//     item: document.querySelector(".first");
-//     el: document.querySelector(".second");
-//     btn: document.querySelector(".button");
-//     p : document.querySelector("p");
-
-// }
-
-// const getResult = () =>
-//     (refs.result.textContent = Number(refs.firstInput.value) + Number(refs.firstInput.value));
-
-// refs.btn.addEventListener("click".getResult);
+//   item: document.querySelector(".first"),
+//   el: document.querySelector(".second"),
+//   btn: document.querySelector(".button"),
+//   p: document.querySelector("p"),
+// };
