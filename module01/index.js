@@ -857,3 +857,29 @@
 //   btn: document.querySelector(".button"),
 //   p: document.querySelector("p"),
 // };
+
+const form = document.querySelector(".form");
+
+const arr = [];
+
+form.addEventListener("submit", submitFunction);
+
+function submitFunction() {
+  event.preventDefault();
+  const formData = new FormData(form);
+  let obj = {};
+  formData.forEach((value, key) => (obj[key] = value));
+  arr.push(obj);
+  console.log(arr);
+}
+const btn = document.querySelector(".butt");
+
+btn.addEventListener("click", calculateWeight);
+
+function calculateWeight() {
+  let userName = prompt("введите имя");
+
+  const findUser = arr.find((el) => el.name === userName);
+
+  console.log(findUser);
+}
