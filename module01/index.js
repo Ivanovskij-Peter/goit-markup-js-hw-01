@@ -858,28 +858,47 @@
 //   p: document.querySelector("p"),
 // };
 
-const form = document.querySelector(".form");
+// const form = document.querySelector(".form");
 
-const arr = [];
+// const arr = [];
 
-form.addEventListener("submit", submitFunction);
+// form.addEventListener("submit", submitFunction);
 
-function submitFunction() {
-  event.preventDefault();
-  const formData = new FormData(form);
-  let obj = {};
-  formData.forEach((value, key) => (obj[key] = value));
-  arr.push(obj);
-  console.log(arr);
-}
-const btn = document.querySelector(".butt");
+// function submitFunction() {
+//   event.preventDefault();
+//   const formData = new FormData(form);
+//   let obj = {};
+//   formData.forEach((value, key) => (obj[key] = value));
+//   arr.push(obj);
+//   console.log(arr);
+// }
+// const btn = document.querySelector(".butt");
 
-btn.addEventListener("click", calculateWeight);
+// btn.addEventListener("click", calculateWeight);
 
-function calculateWeight() {
-  let userName = prompt("введите имя");
+// function calculateWeight() {
+//   let userName = prompt("введите имя");
 
-  const findUser = arr.find((el) => el.name === userName);
+//   const findUser = arr.find((el) => el.name === userName);
 
-  console.log(findUser);
-}
+//   console.log(findUser);
+// }
+
+fetch(
+  "https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=en&target=ru&input=cat",
+  {
+    method: "GET",
+    headers: {
+      "x-rapidapi-host":
+        "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
+      "x-rapidapi-key": "fe30b03427msh776eb92b239324cp17fe36jsn24ec4b253c0e",
+    },
+  }
+)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => console.log(data))
+  .catch((err) => {
+    console.log(err);
+  });
