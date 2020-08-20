@@ -903,21 +903,21 @@ import images from "../post.js";
 //   .catch((err) => {
 //     console.log(err);
 //   });
-const refs = {
-  headerRef: document.querySelector("header"),
-  navListRef: document.querySelector(".nav-list"),
-  homeItemRef: document.getElementById("home"),
-  aboutRef: document.querySelector('[data-action="action"]'),
-  itemsRef: document.getElementsByClassName("item"),
-  sectionTitleRef: document.querySelector(".section-title"),
-  bntChangeTheme: document.querySelector(".btn"),
-  gallaryRef: document.querySelector(".gallery"),
-};
-const refsForm = {
-  form: document.querySelector(".form"),
-  login: document.querySelector(".login"),
-  password: document.querySelector(".password"),
-};
+// const refs = {
+//   headerRef: document.querySelector("header"),
+//   navListRef: document.querySelector(".nav-list"),
+//   homeItemRef: document.getElementById("home"),
+//   aboutRef: document.querySelector('[data-action="action"]'),
+//   itemsRef: document.getElementsByClassName("item"),
+//   sectionTitleRef: document.querySelector(".section-title"),
+//   bntChangeTheme: document.querySelector(".btn"),
+//   gallaryRef: document.querySelector(".gallery"),
+// };
+// const refsForm = {
+//   form: document.querySelector(".form"),
+//   login: document.querySelector(".login"),
+//   password: document.querySelector(".password"),
+// };
 // function toGetInput(event) {
 //   setTimeout(() => {
 //     console.log("event.target:", event.target.value);
@@ -938,72 +938,175 @@ const refsForm = {
 //   // }
 // }
 // toAddClassName(refs.itemsRef);
-document.body.classList;
-refs.headerRef.style.border = "2px solid purple";
-refs.navListRef.style.display = "flex";
-refs.navListRef.style.justifyContent = "space-between";
-refs.navListRef.style.listStyle = "none";
-refs.sectionTitleRef.textContent = "Gallery";
+// document.body.classList;
+// refs.headerRef.style.border = "2px solid purple";
+// refs.navListRef.style.display = "flex";
+// refs.navListRef.style.justifyContent = "space-between";
+// refs.navListRef.style.listStyle = "none";
+// refs.sectionTitleRef.textContent = "Gallery";
 
-refs.bntChangeTheme.addEventListener("click", () => {
-  document.body.classList.toggle("light-theme");
-});
-refs.bntChangeTheme.onclick = () => {
-  document.body.classList.toggle("light-theme");
-};
+// refs.bntChangeTheme.addEventListener("click", () => {
+//   document.body.classList.toggle("light-theme");
+// });
+// refs.bntChangeTheme.onclick = () => {
+//   document.body.classList.toggle("light-theme");
+// };
 
-function createItem() {
-  const li = document.createElement("li");
-  const h3 = document.createElement("h3");
-  const img = document.createElement("img");
-  img.setAttribute("width", "200");
-  img.setAttribute(
-    "src",
-    "https://cdn.pixabay.com/photo/2016/11/23/17/24/automobile-1853936_640.jpg"
-  );
-  const title = `<p>Decription</p>`;
+// function createItem() {
+//   const li = document.createElement("li");
+//   const h3 = document.createElement("h3");
+//   const img = document.createElement("img");
+//   img.setAttribute("width", "200");
+//   img.setAttribute(
+//     "src",
+//     "https://cdn.pixabay.com/photo/2016/11/23/17/24/automobile-1853936_640.jpg"
+//   );
+//   const title = `<p>Decription</p>`;
 
-  li.append(h3, img);
-  li.insertAdjacentElement("beforeend", h3);
-  return li;
-}
-function createGallary(cb, value) {
-  cb(value);
-}
-function generateItems(value, cb, ul) {
-  for (let i = 1; i < value; i++) {
-    let item = cb();
-    ul.prepend(item);
-  }
-  return ul;
-}
-generateItems(10, createItem, refs.gallaryRef);
+//   li.append(h3, img);
+//   li.insertAdjacentElement("beforeend", h3);
+//   return li;
+// }
+// function createGallary(cb, value) {
+//   cb(value);
+// }
+// function generateItems(value, cb, ul) {
+//   for (let i = 1; i < value; i++) {
+//     let item = cb();
+//     ul.prepend(item);
+//   }
+//   return ul;
+// }
+// generateItems(10, createItem, refs.gallaryRef);
 
-refs.gallaryRef.addEventListener("click", (event) => {
-  console.log("event.target:", event.target);
-});
+// refs.gallaryRef.addEventListener("click", (event) => {
+//   console.log("event.target:", event.target);
+// });
 
-function toGenerateModalItem(arr) {
-  let div;
-  document.querySelector("#section").innerHTML = "";
-  arr.forEach((elem) => {
-    div = document.createElement("div");
-    const img = document.createElement("img");
-    const p = document.createElement("p");
-    img.src = elem.img;
-    p.textContent = elem.content;
-    div.append(img, p);
-    document.querySelector("#section").insertAdjacentElement("beforeend", div);
-  });
-}
-toGenerateModalItem(images);
-const navListRef2 = refs.navListRef.cloneNode(true);
-navListRef2.style.border = "10px solid red";
-refs.headerRef.appendChild(navListRef2);
-const navListRef3 = refs.navListRef.cloneNode(false);
-navListRef3.style.border = "15px solid green";
-refs.headerRef.appendChild(navListRef3);
+// function toGenerateModalItem(arr) {
+//   let div;
+//   document.querySelector("#section").innerHTML = "";
+//   arr.forEach((elem) => {
+//     div = document.createElement("div");
+//     const img = document.createElement("img");
+//     const p = document.createElement("p");
+//     img.src = elem.img;
+//     p.textContent = elem.content;
+//     div.append(img, p);
+//     document.querySelector("#section").insertAdjacentElement("beforeend", div);
+//   });
+// }
+// toGenerateModalItem(images);
+// const navListRef2 = refs.navListRef.cloneNode(true);
+// navListRef2.style.border = "10px solid red";
+// refs.headerRef.appendChild(navListRef2);
+// const navListRef3 = refs.navListRef.cloneNode(false);
+// navListRef3.style.border = "15px solid green";
+// refs.headerRef.appendChild(navListRef3);
 
-refs.headerRef.removeChild(navListRef2);
+// refs.headerRef.removeChild(navListRef2);
 
-navListRef3.remove();
+// navListRef3.remove();
+
+// 3) Напишите функцию sum, которая работает таким образом: sum(a)(b) = a+b.
+
+// Да, именно таким образом, используя двойные круглые скобки (не опечатка).
+
+// Например:
+
+// function sum(a) {
+//   return function (b) {
+//     return a + b;
+//   };
+// }
+
+// const sum = (a) => (b) => a + b;
+// console.log(sum(1)(2));
+// alert(sum(5)(-1));
+
+// 4) У нас есть массив объектов, который нужно отсортировать:
+
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" },
+// ];
+// // Обычный способ был бы таким:
+
+// // // по имени (Ann, John, Pete)
+// // users.sort((a, b) => a.name > b.name ? 1 : -1);
+
+// // // по возрасту (Pete, Ann, John)
+// // users.sort((a, b) => a.age > b.age ? 1 : -1);
+// // Можем ли мы сделать его короче, скажем, вот таким?
+
+// //
+// // То есть, чтобы вместо функции, мы просто писали byField(fieldName).
+
+// // Напишите функцию byField, которая может быть использована для этого.
+// function byField(keys) {
+//   return (a, b) => a[keys] > b[keys];
+// }
+
+// users.sort(byField("name"));
+// users.sort(byField("age"));
+
+// function makeArmy() {
+//   let shooters = [];
+
+//   let i = 0;
+//   while (i < 10) {
+//     let num = i;
+//     let shooter = function () {
+//       // функция shooter
+//       console.log(num); // должна выводить порядковый номер
+//     };
+//     shooters.push(shooter);
+//   }
+
+//   return shooters;
+// }
+
+// let army = makeArmy();
+
+// army[0](); // у 0-го стрелка будет номер 10
+// army[5](); // и у 5-го стрелка тоже будет номер 10
+// // ... у всех стрелков будет номер 10, вместо 0, 1, 2, 3...
+
+// let animal = {
+//   eat: function () {
+//     this.full = true;
+//   },
+// };
+// let rabbit = {
+//   __proto__: animal,
+// };
+// rabbit.eat();
+// console.log(rabbit);
+
+// let hamster = {
+//   stomach: [],
+
+//   eat(food) {
+//     this.stomach.push(food);
+//   },
+// };
+
+// let speedy = {
+//   __proto__: hamster,
+//   stomach: [],
+// };
+
+// let lazy = {
+//   __proto__: hamster,
+//   stomach: [],
+// };
+
+// // Этот хомяк нашёл еду
+// speedy.eat("apple");
+// speedy.eat("banana");
+// speedy.eat("orange");
+// console.log(speedy.stomach); // apple
+
+// // // У этого хомяка тоже есть еда. Почему? Исправьте
+// console.log(lazy.stomach); // apple
