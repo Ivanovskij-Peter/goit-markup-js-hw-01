@@ -1,4 +1,5 @@
 "use strict";
+import images from "../post.js";
 // const ask = prompt("Какое официальное значение Javascript?");
 // let name = ECMAscript;
 // if (ask === ECMAscript) {
@@ -884,21 +885,125 @@
 //   console.log(findUser);
 // }
 
-fetch(
-  "https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=en&target=ru&input=cat",
-  {
-    method: "GET",
-    headers: {
-      "x-rapidapi-host":
-        "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
-      "x-rapidapi-key": "fe30b03427msh776eb92b239324cp17fe36jsn24ec4b253c0e",
-    },
+// fetch(
+//   "https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=en&target=ru&input=cat",
+//   {
+//     method: "GET",
+//     headers: {
+//       "x-rapidapi-host":
+//         "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
+//       "x-rapidapi-key": "fe30b03427msh776eb92b239324cp17fe36jsn24ec4b253c0e",
+//     },
+//   }
+// )
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => console.log(data))
+//   .catch((err) => {
+//     console.log(err);
+//   });
+const refs = {
+  headerRef: document.querySelector("header"),
+  navListRef: document.querySelector(".nav-list"),
+  homeItemRef: document.getElementById("home"),
+  aboutRef: document.querySelector('[data-action="action"]'),
+  itemsRef: document.getElementsByClassName("item"),
+  sectionTitleRef: document.querySelector(".section-title"),
+  bntChangeTheme: document.querySelector(".btn"),
+  gallaryRef: document.querySelector(".gallery"),
+};
+const refsForm = {
+  form: document.querySelector(".form"),
+  login: document.querySelector(".login"),
+  password: document.querySelector(".password"),
+};
+// function toGetInput(event) {
+//   setTimeout(() => {
+//     console.log("event.target:", event.target.value);
+//     // console.log("event.currentTarget:", event.currentTarget);
+//   }, 1000);
+// }
+// refsForm.form.addEventListener("input", toGetInput);
+// console.dir(refs.itemsRef);
+
+// function toAddClassName(arr) {
+//   arr.forEach((item) => {
+//     item.classList.add("nav-item");
+//     console.log(item);
+//   });
+//   // for (const item of arr) {
+//   //   console.log(item);
+//   //   item.classList.add("nav-item");
+//   // }
+// }
+// toAddClassName(refs.itemsRef);
+document.body.classList;
+refs.headerRef.style.border = "2px solid purple";
+refs.navListRef.style.display = "flex";
+refs.navListRef.style.justifyContent = "space-between";
+refs.navListRef.style.listStyle = "none";
+refs.sectionTitleRef.textContent = "Gallery";
+
+refs.bntChangeTheme.addEventListener("click", () => {
+  document.body.classList.toggle("light-theme");
+});
+refs.bntChangeTheme.onclick = () => {
+  document.body.classList.toggle("light-theme");
+};
+
+function createItem() {
+  const li = document.createElement("li");
+  const h3 = document.createElement("h3");
+  const img = document.createElement("img");
+  img.setAttribute("width", "200");
+  img.setAttribute(
+    "src",
+    "https://cdn.pixabay.com/photo/2016/11/23/17/24/automobile-1853936_640.jpg"
+  );
+  const title = `<p>Decription</p>`;
+
+  li.append(h3, img);
+  li.insertAdjacentElement("beforeend", h3);
+  return li;
+}
+function createGallary(cb, value) {
+  cb(value);
+}
+function generateItems(value, cb, ul) {
+  for (let i = 1; i < value; i++) {
+    let item = cb();
+    ul.prepend(item);
   }
-)
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => console.log(data))
-  .catch((err) => {
-    console.log(err);
+  return ul;
+}
+generateItems(10, createItem, refs.gallaryRef);
+
+refs.gallaryRef.addEventListener("click", (event) => {
+  console.log("event.target:", event.target);
+});
+
+function toGenerateModalItem(arr) {
+  let div;
+  document.querySelector("#section").innerHTML = "";
+  arr.forEach((elem) => {
+    div = document.createElement("div");
+    const img = document.createElement("img");
+    const p = document.createElement("p");
+    img.src = elem.img;
+    p.textContent = elem.content;
+    div.append(img, p);
+    document.querySelector("#section").insertAdjacentElement("beforeend", div);
   });
+}
+toGenerateModalItem(images);
+const navListRef2 = refs.navListRef.cloneNode(true);
+navListRef2.style.border = "10px solid red";
+refs.headerRef.appendChild(navListRef2);
+const navListRef3 = refs.navListRef.cloneNode(false);
+navListRef3.style.border = "15px solid green";
+refs.headerRef.appendChild(navListRef3);
+
+refs.headerRef.removeChild(navListRef2);
+
+navListRef3.remove();
